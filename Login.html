@@ -1,105 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Alphamed</title>
-    <link rel="shortcut icon" href="assets/AlphaMed.png" type="image/x-icon">
-    <style>
-        body {
-            background-repeat: no-repeat;
-            background-color: #0a0a0a;
-            color: #00ffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 98vh;
-            margin: 0;
-            flex-direction: column;
-        }
-        .logo {
-            width: 300px;
-            margin-bottom: 20px;
-        }
-        .login-container {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid #00ffff;
-            box-shadow: 0 0 10px #00ffff;
-            text-align: center;
-            width: 300px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Alphamed</title>
+  <link rel="shortcut icon" href="assets/AlphaMed.png" type="image/x-icon">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #00ffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 98vh;
+      margin: 0;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .login1{
-            text-shadow: 0px 0px 15px #00ffff;
-        }
-        h2 {
-            color: #00ffff;
-        }
-        input {
-            width: calc(100% - 20px);
-            padding: 12px;
-            margin: 15px 0;
-            border: none;
-            border-radius: 5px;
-            background: #222;
-            color: #00ffff;
-            display: block;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #00ffff;
-            color: #000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 0 10px #00ffff;
-        }
-        button:hover {
-            background: #cc0000;
-            box-shadow: 0px 0px 15px #cc0000;
-        }
-        .register-link {
-            margin-top: 15px;
-            display: block;
-            color: #00ffff;
-            text-decoration: none;
-        }
-        .register-link:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 12px;
-        }
-        .footer a {
-            color: #00ffff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    /* Neon glow effect no fundo */
+    body::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      right: -100px;
+      bottom: -100px;
+      background: radial-gradient(circle at center, #00ffff22 0%, #00ffff11 40%, transparent 70%);
+      z-index: 0;
+      filter: blur(80px);
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .logo {
+      width: 300px;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+
+    .login-container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff44;
+      text-align: center;
+      width: 300px;
+      z-index: 1;
+    }
+
+    .login1 {
+      text-shadow: 0px 0px 15px #00ffff;
+    }
+
+    h2 {
+      color: #00ffff;
+      margin-top: 0;
+    }
+
+    input {
+      width: calc(100% - 20px);
+      padding: 12px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 5px;
+      background: #222;
+      color: #00ffff;
+      display: block;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff88;
+    }
+
+    button:hover {
+      background: #cc0000;
+      box-shadow: 0px 0px 15px #cc0000, 0px 0px 30px #cc000088;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      display: block;
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .register-link:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      z-index: 1;
+    }
+
+    .footer a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <img class="logo" src="assets/AlphaMed.png" alt="Alphamed Logo">
-    <div class="login-container">
-        <h2 class="login1">Login</h2>
-        <form action="#" method="POST">
-            <input type="text" name="username" placeholder="Usuário" required>
-            <input type="password" name="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-        <a class="register-link" href="Registro.html">Não tem uma conta? Registre-se</a>
-    </div>
-    <div class="footer">
-        <a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a>
-    </div>
+  <img class="logo" src="assets/AlphaMed.png" alt="Alphamed Logo">
+  <div class="login-container">
+    <h2 class="login1">Login</h2>
+    <form action="#" method="POST">
+      <input type="text" name="username" placeholder="Usuário" required>
+      <input type="password" name="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <a class="register-link" href="Registro.html">Não tem uma conta? Registre-se</a>
+  </div>
+  <div class="footer">
+    <a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a>
+  </div>
 </body>
 </html>

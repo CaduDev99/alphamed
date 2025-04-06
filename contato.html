@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - AlphaMed</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      font-family: Arial, sans-serif;
+      color: #00ffff;
+    }
+
+    header {
+      background-color: #0a0a0a;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #00ffff;
+      box-shadow: 0 0 30px #00ffff;
+      gap: 15px;
+    }
+
+    header img {
+      width: 60px;
+      height: auto;
+    }
+
+    header h1 {
+      text-shadow: 0 0 10px #00ffff;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #00ffff;
+      background-color: #1a1a1a;
+      color: #00ffff;
+      resize: vertical;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #00ffff;
+      color: #0a0a0a;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background-color: #ff0000;
+      color: #fff;
+      box-shadow: 0 0 15px #ff0000;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .social-links a {
+      color: #00ffff;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/AlphaMed.png" alt="Logo AlphaMed">
+    <h1>Fale com a AlphaMed</h1>
+  </header>
+
+  <main>
+    <p>Estamos prontos para te ouvir. Preencha o formulário abaixo ou use nossos canais de atendimento.</p>
+    <form action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <input type="text" name="assunto" placeholder="Assunto" required>
+      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="contact-info">
+      <p>Email: suporte@alphamed.com</p>
+      <p>WhatsApp: (11) 99999-9999</p>
+      <p>Endereço: Rua da Emergência, 123 - São Paulo, SP</p>
+
+      <div class="social-links">
+        <p>Nos acompanhe:</p>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+
+    <iframe src="https://maps.google.com/maps?q=avenida%20paulista&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </main>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/AlphaMed.png" type="image/x-icon">
+  <title>Protocolos de APH - AlphaMed</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      font-family: Arial, sans-serif;
+      color: #00ffff;
+    }
+
+    header {
+      background-color: #0a0a0a;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      border-bottom: 2px solid #00ffff;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    header img {
+      width: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      text-shadow: 0 0 10px #00ffff;
+      font-size: 28px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #111;
+      border: 1px solid #00ffff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px #00ffff33;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .card img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cccccc;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/AlphaMed.png" alt="Logo AlphaMed">
+    <h1>Protocolos de Atendimento Pré-Hospitalar</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <img src="assets/phtls.webp" alt="PHTLS">
+      <h3>PHTLS</h3>
+      <p>Protocolo de Suporte ao Trauma Pré-Hospitalar, desenvolvido pela NAEMT.</p>
+      <a href="https://hcxfmusp.org.br/portal/online/curso/curso-phtls/" target="_blank">Ver protocolo</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/m.jpg" alt="Controle de Hemorragias">
+      <h3>Controle de Hemorragias</h3>
+      <p>Curso "Stop the Bleed" da NAEMT focado em contenção de sangramentos.</p>
+      <a href="https://cms.bleedingcontrol.org/" target="_blank">Ver protocolo</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/BLS-1.png" alt="Suporte Básico de Vida">
+      <h3>BLS - Basic Life Support</h3>
+      <p>Protocolos da AHA para RCP e atendimento inicial de emergências cardíacas.</p>
+      <a href="https://www.heart.org/en/cpr" target="_blank">Ver protocolo</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/CDC_logo_2024.svg.png" alt="Protocolos de Trauma CDC">
+      <h3>Trauma - CDC</h3>
+      <p>Diretrizes dos Centros de Controle e Prevenção de Doenças para traumas.</p>
+      <a href="https://www.cdc.gov/traumacare/protocols.html" target="_blank">Ver protocolo</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/tccc.png" alt="TCCC">
+      <h3>TCCC - Atendimento Tático</h3>
+      <p>Protocolo para situações de combate e ambientes hostis, com foco militar.</p>
+      <a href="https://www.naemt.org/education/trauma-education/naemt-tccc" target="_blank">Ver protocolo</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/aphbr.jpg" alt="Protocolos Nacionais">
+      <h3>Protocolos Nacionais de APH</h3>
+      <p>Conjunto de diretrizes utilizadas em todo o território nacional.</p>
+      <a href="https://www.cbm.df.gov.br/downloads/edocman/legislacoes/manuaisoperacionais/APH-livroprotocolo.pdf" target="_blank">Ver protocolo</a>
+    </div>
+  </div>
+</body>
+</html>

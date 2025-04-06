@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos - AlphaMed</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      font-family: Arial, sans-serif;
+      color: #00ffff;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-color: #0a0a0a;
+      border-bottom: 2px solid #00ffff;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    header img {
+      width: 50px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      text-shadow: 0 0 10px #00ffff;
+      font-size: 28px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    nav button {
+      background-color: transparent;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background-color: #00ffff;
+      color: #0a0a0a;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .tab-content {
+      display: none;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    h2 {
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    h3 {
+      color: #ff0000;
+    }
+
+    p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    ul {
+      color: #ccc;
+      padding-left: 20px;
+    }
+
+    .img-placeholder {
+      background-color: #222;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px dashed #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/AlphaMed.png" alt="Logo AlphaMed">
+    <h1>Cursos de APH - AlphaMed</h1>
+  </header>
+
+  <nav>
+    <button class="tab-btn active" onclick="openTab('bls')">BLS</button>
+    <button class="tab-btn" onclick="openTab('als')">ALS</button>
+    <button class="tab-btn" onclick="openTab('atls')">ATLS</button>
+  </nav>
+
+  <section id="bls" class="tab-content active">
+    <h2>BLS - Suporte Básico de Vida</h2>
+    <h3>Objetivo</h3>
+    <p>Capacitar os participantes a reconhecer emergências cardiorrespiratórias e aplicar técnicas básicas de BLS para salvar vidas até a chegada de ajuda avançada.</p>
+
+    <h3>Duração Sugerida</h3>
+    <p>2 horas (1h teoria + 1h prática).</p>
+
+    <h3>Público-Alvo</h3>
+    <p>Leigos, socorristas iniciantes ou estudantes da área da saúde.</p>
+
+    <h3>Parte 1: Teoria</h3>
+    <h4>Introdução ao BLS</h4>
+    <ul>
+      <li>Manutenção da vida em PCR.</li>
+      <li>Foco: compressões, vias aéreas e respiração.</li>
+      <li>Cadeia de Sobrevivência: ligação, RCP, desfibrilação, suporte avançado.</li>
+    </ul>
+    <div class="img-placeholder">Ilustração: Cadeia de sobrevivência</div>
+
+    <h4>Parada Cardiorrespiratória (PCR)</h4>
+    <ul>
+      <li>Sinais: Sem resposta, sem respiração, sem pulso.</li>
+      <li>Causas: Infarto, trauma, afogamento, etc.</li>
+      <li>Importância da ação rápida.</li>
+    </ul>
+    <div class="img-placeholder">Ilustração: Gráfico de queda na sobrevida por minuto</div>
+
+    <h4>Princípios do BLS</h4>
+    <ul>
+      <li>Verificar segurança da cena.</li>
+      <li>Checar consciência e respiração.</li>
+      <li>Iniciar RCP com compressões de alta qualidade.</li>
+    </ul>
+    <div class="img-placeholder">Ilustração: Fluxograma do BLS</div>
+
+    <h3>Parte 2: Prática</h3>
+    <p>Demonstração com manequins, prática em grupo, simulações realistas e uso do DEA.</p>
+    <div class="img-placeholder">Ilustração: Técnicas em adultos, crianças e bebês</div>
+  </section>
+
+  <section id="als" class="tab-content">
+    <h2>ALS - Suporte Avançado de Vida</h2>
+    <p>Curso voltado para profissionais de saúde capacitados para manobras invasivas e medicamentosas no atendimento de PCR e outras emergências.</p>
+    <h3>Conteúdo Programático</h3>
+    <ul>
+      <li>Algoritmos de PCR com e sem desfibrilação.</li>
+      <li>Vias aéreas avançadas (IOT, SGA).</li>
+      <li>Administração de medicamentos (adrenalina, amiodarona etc).</li>
+      <li>Monitorização e ECG no atendimento.</li>
+    </ul>
+    <div class="img-placeholder">Ilustração: Algoritmo de PCR adulto</div>
+  </section>
+
+  <section id="atls" class="tab-content">
+    <h2>ATLS - Suporte Avançado ao Trauma</h2>
+    <p>Protocolo sistematizado para atendimento inicial ao trauma, voltado para equipes médicas em urgências.</p>
+    <h3>Conteúdo Programático</h3>
+    <ul>
+      <li>ABCDE do trauma.</li>
+      <li>Controle de vias aéreas com trauma cervical.</li>
+      <li>Diagnóstico rápido com FAST, RX e TC.</li>
+      <li>Decisões cirúrgicas rápidas e prioridade de transferências.</li>
+    </ul>
+    <div class="img-placeholder">Ilustração: Fluxo de atendimento inicial ao trauma</div>
+  </section>
+
+  <script>
+    function openTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

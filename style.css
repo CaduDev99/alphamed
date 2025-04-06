@@ -149,11 +149,6 @@ body {
     transition: 0.3s;
 }
 
-.benefit:hover {
-    background: rgba(0, 240, 255, 0.2);
-    transform: scale(1.05);
-}
-
 .cta {
     padding: 50px;
 }

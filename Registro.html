@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro - Alphamed</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      background-color: #1a1a1a;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      padding: 30px;
+      width: 320px;
+      box-shadow: 0 0 15px #00ffff;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c2c2c;
+      color: white;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    .btn {
+      background-color: #00ffff;
+      color: black;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .btn:hover {
+      background-color: #00d9d9;
+    }
+
+    .footer-links {
+      margin-top: 15px;
+      font-size: 12px;
+    }
+
+    .footer-links a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="assets/AlphaMed.png" alt="Logo Alphamed" class="logo" />
+
+  <div class="container">
+    <h2>Registro</h2>
+    <form>
+      <input type="text" placeholder="Nome Completo" required />
+      <input type="number" placeholder="CPF" required />
+      <input type="number" placeholder="Idade" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Criar Senha" required />
+      <input type="password" placeholder="Confirmar Senha" required />
+      <button type="submit" class="btn">Registrar</button>
+    </form>
+  </div>
+
+  <div class="footer-links">
+    <a href="#">Termos de Serviço</a> |
+    <a href="#">Política de Privacidade</a>
+  </div>
+
+</body>
+</html>
